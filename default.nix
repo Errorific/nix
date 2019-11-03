@@ -2,6 +2,7 @@ machineName:
 { config, pkgs, ... }:
 let 
   thisPath = ./.;
+  home-manager-src = import "${thisPath}/deps/home-manager";
 in {
   imports =
     [ # Include the results of the hardware scan.
