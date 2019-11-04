@@ -110,7 +110,6 @@ in {
     xserver = {
       enable = true;
       layout = "us";
-      videoDrivers = ["virtualbox"];
       displayManager.lightdm.enable = true;
       xkbOptions = "ctrl:nocaps";
       libinput = {
