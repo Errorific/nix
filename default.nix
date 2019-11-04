@@ -54,6 +54,7 @@ in {
     bluetooth = {
       enable = true;
     };
+    brightnessctl.enable = true;
   };
 
   sound.enable = true;
@@ -106,6 +107,16 @@ in {
     };
     upower.enable = true;
     printing.enable = true;
+    xserver = {
+      enable = true;
+      layout = "us";
+      displayManager.lightdm.enable = true;
+      xkbOptions = "ctrl:nocaps";
+      libinput = {
+        enable = true;
+        naturalScrolling = true;
+      };
+    };
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
