@@ -23,6 +23,26 @@ in {
       userEmail = "chris@error.cm";
       ignores = [];
     };
+    urxvt = {
+      enable = true;
+      fonts = ["xft:Source Code Pro:size=11"];
+    };
+  };
+
+  services = { 
+
+  };
+
+  xsession = {
+    enable = true;
+    windowManager.xmonad = {
+      enable = true;
+      enableContribAndExtras = true;
+      extraPackages = hpkgs: [
+        hpkgs.xmonad-contrib
+      ];
+      config = ./dotfiles/xmonad/xmonad.hs;
+    };
   };
 }
 
