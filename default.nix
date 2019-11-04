@@ -43,10 +43,70 @@ in {
     hostName = "${machineName}";
   };
 
+  hardware = {
+    pulseaudio = {
+      enable = true;
+      package = pkgs.pulseaudioFull;
+      daemon.config = {
+        flat-volumes = "no";
+      };
+    };
+    bluetooth = {
+      enable = true;
+    };
+  };
+
+  sound.enable = true;
+
   time.timeZone = "Australia/Brisbane";
+
+    # Select internationalisation properties.
+  i18n = {
+    consoleFont = "Lat2-Terminus16";
+    consoleKeyMap = "us";
+    defaultLocale = "en_AU.UTF-8";
+  };
+
+  fonts = {
+    enableFontDir = true;
+     fonts = with pkgs; [
+       corefonts  # Micrsoft free fonts
+       noto-fonts-emoji
+       nerdfonts
+       emojione
+       source-code-pro
+       terminus_font # for hidpi screens, large fonts
+     ];
+  };
 
   environment.systemPackages = with pkgs; [
   ];
+
+  programs = {
+    bash.enableCompletion = true;
+    ssh.startAgent = true;
+  };
+
+  virtualisation = {
+    virtualbox = {
+      # Enable VirtualBox (don't install the package)
+      host.enable = true;
+      host.enableExtensionPack = true;
+    };
+    docker = {
+      enable = true;
+    };
+  };
+
+  services = {
+    openssh = {
+      enable = true;
+      permitRootLogin = "no";
+      passwordAuthentication = false;
+    };
+    upower.enable = true;
+    printing.enable = true;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   home-manager.users.chris = import ./home-manager "${machineName}";
