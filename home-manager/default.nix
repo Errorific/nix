@@ -49,10 +49,10 @@ in {
       source = ./dotfiles/taffybar/taffybar.hs;
       onChange = restart-taffybar;
     };
-    ".config/taffybar/taffybar.css" = {
-      source = ./dotfiles/taffybar/taffybar.css;
-      onChange = restart-taffybar;
-    };
+    # ".config/taffybar/taffybar.css" = {
+    #   source = ./dotfiles/taffybar/taffybar.css;
+    #   onChange = restart-taffybar;
+    # };
   };
 
   services = { 
