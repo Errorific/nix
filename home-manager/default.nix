@@ -42,7 +42,7 @@ in {
   home.file = {
     ".config/taffybar/taffybar.hs" = {
       source = ./dotfiles/taffybar/taffybar.hs;
-      on-change = restart-taffybar;
+      onChange = restart-taffybar;
     };
   };
 
