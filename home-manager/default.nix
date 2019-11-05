@@ -62,4 +62,4 @@ in {
       config = ./dotfiles/xmonad/xmonad.hs;
     };
   };
-};
+}
