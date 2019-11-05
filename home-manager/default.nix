@@ -15,6 +15,11 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    dmenu
+    networkmanagerapplet
+    powertop
+    
+
     neovim
     vim
     wget
@@ -42,6 +47,10 @@ in {
   home.file = {
     ".config/taffybar/taffybar.hs" = {
       source = ./dotfiles/taffybar/taffybar.hs;
+      onChange = restart-taffybar;
+    };
+    ".config/taffybar/taffybar.css" = {
+      source = ./dotfiles/taffybar/taffybar.css;
       onChange = restart-taffybar;
     };
   };
