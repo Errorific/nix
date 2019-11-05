@@ -57,6 +57,7 @@ in {
 
   services = { 
     taffybar.enable = true;
+    xembed-sni-proxy.enable = true;
   };
 
   xsession = {
