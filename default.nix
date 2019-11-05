@@ -28,7 +28,7 @@ in {
       "https://cachix.cachix.org"
       "https://all-hies.cachix.org"
       "https://nixcache.reflex-frp.org"
-      "http://hydra.qfpl.io"
+      "https://hydra.qfpl.io"
     ];
     binaryCachePublicKeys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
