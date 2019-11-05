@@ -119,6 +119,8 @@ in {
     };
   };
 
+  powerManagement.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   home-manager.users.chris = import ./home-manager "${machineName}";
   users.extraUsers.chris = {
