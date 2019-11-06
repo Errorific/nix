@@ -49,8 +49,8 @@ in {
     };
     urxvt = {
       enable = true;
-      fonts = ["xft:Sauce Code Pro:size=11"];
-      #fonts = ["xft:terminus:size=11"];
+      fonts = ["xft:SauceCodePro Nerd Font:size=11"];
+      #fonts = ["xft:TerminessTTF Nerd Font:size=11"];
     };
     #vscode = {
     #  enable = true;
