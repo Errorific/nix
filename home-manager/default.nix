@@ -7,6 +7,7 @@ let
     $DRY_RUN_CMD systemctl --user restart taffybar.service && true
     echo "Taffybar restart done"
   '';
+  all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};
 in {
   nixpkgs.overlays = [
     (import ./home-overlays/taffybar)
@@ -26,6 +27,8 @@ in {
     vscode
     wget
     which
+    # Install stable HIE for GHC 8.8.1, 8.6.5 and 8.4.4
+    (all-hies.selection { selector = p: { inherit (p) ghc881 ghc865 ghc844; }; })
   ];
 
   programs = {
