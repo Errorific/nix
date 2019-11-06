@@ -79,8 +79,10 @@ in {
     fonts = with pkgs; [
       corefonts  # Micrsoft free fonts
       noto-fonts-emoji
-      nerdfonts
+      #nerdfonts
       emojione
+      (nerdfonts.override {withFont = "source-code-pro";})
+      (nerdfonts.override {withFont = "terminus-font";})
       # terminus_font # for hidpi screens, large fonts
     ];
   };
