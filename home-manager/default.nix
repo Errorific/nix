@@ -27,8 +27,8 @@ in {
     vscode
     wget
     which
-    # Install stable HIE for GHC 8.8.1, 8.6.5 and 8.4.4
-    (all-hies.selection { selector = p: { inherit (p) ghc881 ghc865 ghc844; }; })
+    # Install stable HIE for GHC 8.6.5 and 8.4.4
+    (all-hies.selection { selector = p: { inherit (p) ghc865 ghc844; }; })
   ];
 
   programs = {
