@@ -114,6 +114,7 @@ in {
     upower.enable = true;
     printing.enable = true;
     xserver = {
+      dpi = 120;
       enable = true;
       layout = "us";
       displayManager.lightdm.enable = true;
