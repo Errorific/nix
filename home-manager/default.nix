@@ -18,6 +18,7 @@ in {
     dmenu
     networkmanagerapplet
     powertop
+    blueman
     
 
     neovim
@@ -51,6 +52,13 @@ in {
     };
     vscode = {
       enable = true;
+    };
+    zsh = {
+      enable = true;
+      oh-my-zsh = {
+        enable = true;
+        theme = "steeef";
+      };
     };
   };
 

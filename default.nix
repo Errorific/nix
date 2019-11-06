@@ -76,14 +76,14 @@ in {
 
   fonts = {
     enableFontDir = true;
-     fonts = with pkgs; [
-       corefonts  # Micrsoft free fonts
-       noto-fonts-emoji
-       nerdfonts
-       emojione
-       source-code-pro
-       terminus_font # for hidpi screens, large fonts
-     ];
+    fonts = with pkgs; [
+      corefonts  # Micrsoft free fonts
+      noto-fonts-emoji
+      nerdfonts
+      emojione
+      source-code-pro
+      terminus_font # for hidpi screens, large fonts
+    ];
   };
 
   environment.systemPackages = with pkgs; [
