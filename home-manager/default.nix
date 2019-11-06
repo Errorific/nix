@@ -49,8 +49,8 @@ in {
     };
     urxvt = {
       enable = true;
-      #fonts = ["xft:Source Code Pro:size=11"];
-      fonts = ["xft:terminus:size=11"];
+      fonts = ["xft:Source Code Pro:size=11"];
+      #fonts = ["xft:terminus:size=11"];
     };
     #vscode = {
     #  enable = true;
