@@ -125,6 +125,9 @@ in {
         naturalScrolling = true;
       };
     };
+    fwupd = {
+      enable = true;
+    }
   };
 
   powerManagement.enable = true;
