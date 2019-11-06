@@ -81,8 +81,8 @@ in {
       noto-fonts-emoji
       #nerdfonts
       emojione
-      (nerdfonts.override {withFont = "source-code-pro";})
-      (nerdfonts.override {withFont = "terminus-font";})
+      (nerdfonts.override {withFont = "SourceCodePro";})
+      (nerdfonts.override {withFont = "Terminus";})
       # terminus_font # for hidpi screens, large fonts
     ];
   };
