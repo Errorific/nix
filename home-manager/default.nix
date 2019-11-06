@@ -23,6 +23,7 @@ in {
 
     neovim
     vim
+    vscode
     wget
     which
   ];
@@ -50,9 +51,9 @@ in {
       enable = true;
       fonts = ["xft:Source Code Pro:size=11"];
     };
-    vscode = {
-      enable = true;
-    };
+    #vscode = {
+    #  enable = true;
+    #};
     zsh = {
       enable = true;
       oh-my-zsh = {
