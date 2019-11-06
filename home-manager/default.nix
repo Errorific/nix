@@ -51,18 +51,43 @@ in {
     };
     vscode = {
       enable = true;
+      extensions = []
+        pkgs.vscode-extensions.vscodevim.vim
+        pkgs.vscode-extensions.bbenoist.Nix
+      ];
       userSettings = {
         editor = {
-	  formatOnSave = true;
-	  rulers = [120];
-	  minimap.enabled = false;
-	  tabSize = 2;
-	  insertSpaces = true;
-	};
-	window = {
-	  menuBarVisibility = "toggle";
-	  zoomLevel = -1;
-	};
+          formatOnSave = true;
+          rulers = [120];
+          minimap.enabled = false;
+          tabSize = 2;
+          insertSpaces = true;
+        };
+        vim = {
+          easymotion = true;
+          leader = " ";
+          normalModeKeyBindingsNonRecursive = [
+            {
+              before = ["<leader>" "w" "h"];
+              after = ["<C-w>" "h"];
+            }
+            {
+              before = ["<leader>" "w" "l"];
+              after = ["<C-w>" "l"];
+            }
+            {
+              before = ["<leader>" "w" "j"];
+              after = ["<C-w>", "j"];
+            }
+            {
+              before = ["<leader>" "w" "k"];
+              after = ["<C-w>" "k"];
+            }
+          ];
+          useSystemClipboard = true;
+        };
+        window = {
+        };
       };
     };
   };
