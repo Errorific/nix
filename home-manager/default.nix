@@ -77,7 +77,7 @@ in {
             }
             {
               before = ["<leader>" "w" "j"];
-              after = ["<C-w>", "j"];
+              after = ["<C-w>" "j"];
             }
             {
               before = ["<leader>" "w" "k"];
