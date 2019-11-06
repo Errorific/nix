@@ -55,8 +55,6 @@ in {
       package = pkgs.pulseaudioFull;
       daemon.config = {
         flat-volumes = "no";
-        enable-lfe-remixing = "yes";
-        lfe-crossover-freq = 250;
       };
     };
     bluetooth = {
