@@ -4,7 +4,10 @@
   boot.initrd.luks.devices = [
     {
       name = "root";
-      device = "/dev/sda2";
+      # nvme0n1p1 = boot
+      # nvme0n1p2 = windows
+      # nvme0n1p3 = our nixos luks volume
+      device = "/dev/nvme0n1p3";
       preLVM = true;
     }
   ];

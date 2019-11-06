@@ -96,7 +96,6 @@ in {
 
   virtualisation = {
     virtualbox = {
-      # Enable VirtualBox (don't install the package)
       host.enable = true;
       host.enableExtensionPack = true;
     };
