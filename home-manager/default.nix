@@ -51,7 +51,7 @@ in {
     };
     vscode = {
       enable = true;
-      extensions = []
+      extensions = [
         pkgs.vscode-extensions.vscodevim.vim
         pkgs.vscode-extensions.bbenoist.Nix
       ];
