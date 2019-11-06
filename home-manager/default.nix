@@ -38,9 +38,32 @@ in {
       userEmail = "chris@error.cm";
       ignores = [];
     };
+    tmux = {
+      enable = true;
+      historyLimit = 10000;
+      terminal = "screen-256color";
+      aggressiveResize = true;
+      shortcut = "z";
+    };
     urxvt = {
       enable = true;
       fonts = ["xft:Source Code Pro:size=11"];
+    };
+    vscode = {
+      enable = true;
+      userSettings = {
+        editor = {
+	  formatOnSave = true;
+	  rulers = [120];
+	  minimap.enabled = false;
+	  tabSize = 2;
+	  insertSpaces = true;
+	};
+	window = {
+	  menuBarVisibility = "toggle";
+	  zoomLevel = -1;
+	};
+      };
     };
   };
 
@@ -74,4 +97,35 @@ in {
       config = ./dotfiles/xmonad/xmonad.hs;
     };
   };
+
+  xresources.extraConfig = ''
+  ! special
+  *.foreground:   #c5c8c6
+  *.background:   #000000
+  *.cursorColor:  #c5c8c6
+  ! black
+  *.color0:       #282a2e
+  *.color8:       #373b41
+  ! red
+  *.color1:       #a54242
+  *.color9:       #cc6666
+  ! green
+  *.color2:       #8c9440
+  *.color10:      #b5bd68
+  ! yellow
+  *.color3:       #de935f
+  *.color11:      #f0c674
+  ! blue
+  *.color4:       #5f819d
+  *.color12:      #81a2be
+  ! magenta
+  *.color5:       #85678f
+  *.color13:      #b294bb
+  ! cyan
+  *.color6:       #5e8d87
+  *.color14:      #8abeb7
+  ! white
+  *.color7:       #707880
+  *.color15:      #c5c8c6
+  '';
 }

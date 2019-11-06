@@ -12,5 +12,7 @@
     }
   ];
 
+  fonts.fontconfig.dpi = 128
+
   services.xserver.videoDrivers = ["intel"];
 }
