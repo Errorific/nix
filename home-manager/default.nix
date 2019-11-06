@@ -49,7 +49,7 @@ in {
     };
     urxvt = {
       enable = true;
-      fonts = ["xft:Source Code Pro:size=11"];
+      fonts = ["xft:Sauce Code Pro:size=11"];
       #fonts = ["xft:terminus:size=11"];
     };
     #vscode = {
