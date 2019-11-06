@@ -127,7 +127,7 @@ in {
     };
     fwupd = {
       enable = true;
-    }
+    };
   };
 
   powerManagement.enable = true;
