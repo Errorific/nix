@@ -81,8 +81,7 @@ in {
       noto-fonts-emoji
       nerdfonts
       emojione
-      source-code-pro
-      terminus_font # for hidpi screens, large fonts
+      # terminus_font # for hidpi screens, large fonts
     ];
   };
 
