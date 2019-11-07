@@ -64,12 +64,10 @@ in {
       oh-my-zsh = {
         enable = true;
         plugins = [
-          "completion"
           "extract"
-          "key-bindings"
           "history"
           "git"
-          "git-extra"
+          "git-extras"
           "tmux"
           "ssh-agent"
         ];
