@@ -61,6 +61,9 @@ in {
     #};
     zsh = {
       enable = true;
+      oh-my-zsh = {
+        enable = true;
+      }
     };
     starship = {
       enable = true;
