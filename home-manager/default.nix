@@ -22,6 +22,7 @@ in {
       powertop
       blueman
       
+      slack
 
       neovim
       vim
