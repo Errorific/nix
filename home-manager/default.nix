@@ -15,21 +15,27 @@ in {
 
   nixpkgs.config.allowUnfree = true;
 
-  home.packages = with pkgs; [
-    dmenu
-    networkmanagerapplet
-    powertop
-    blueman
-    
+  home = {
+    packages = with pkgs; [
+      dmenu
+      networkmanagerapplet
+      powertop
+      blueman
+      
 
-    neovim
-    vim
-    vscode
-    wget
-    which
-    # Install stable HIE for GHC 8.6.5 and 8.4.4
-    (all-hies.selection { selector = p: { inherit (p) ghc865 ghc844; }; })
-  ];
+      neovim
+      vim
+      vscode
+      wget
+      which
+      # Install stable HIE for GHC 8.6.5 and 8.4.4
+      (all-hies.selection { selector = p: { inherit (p) ghc865 ghc844; }; })
+    ];
+    sessionVariables = {
+      EDITOR = "nvim";
+      BROWSER = "chromium";
+    };
+  };
 
   programs = {
     home-manager.enable = true;    
