@@ -67,7 +67,7 @@ myKeys conf@XConfig {modMask = modm} =
                    , ((XT.controlMask .|. modm, XT.xK_w), spawn "~/bin/screenlayout work")
                    , ((XT.controlMask .|. modm, XT.xK_e), spawn "~/bin/screenlayout home")
                    , ((modm .|. XT.shiftMask, XT.xK_p), spawn "passmenu")
-                   , ("M-'", scratchpadSpawnAction conf) -- quake terminal
+                   , ((modm, XT.xK_apostrophe), scratchpadSpawnAction conf) -- quake terminal
                    ]
   in kees <> keys def conf
 
