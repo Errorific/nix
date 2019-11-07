@@ -63,6 +63,16 @@ in {
       enable = true;
       oh-my-zsh = {
         enable = true;
+        plugins = [
+          completion
+          extract
+          key-bindings
+          history
+          git
+          git-extra 
+          tmux
+          ssh-agent
+        ];
       };
     };
     starship = {
