@@ -63,7 +63,7 @@ in {
       enable = true;
       oh-my-zsh = {
         enable = true;
-      }
+      };
     };
     starship = {
       enable = true;
