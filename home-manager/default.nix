@@ -64,14 +64,14 @@ in {
       oh-my-zsh = {
         enable = true;
         plugins = [
-          completion
-          extract
-          key-bindings
-          history
-          git
-          git-extra 
-          tmux
-          ssh-agent
+          "completion"
+          "extract"
+          "key-bindings"
+          "history"
+          "git"
+          "git-extra"
+          "tmux"
+          "ssh-agent"
         ];
       };
     };
