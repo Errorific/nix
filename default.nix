@@ -112,6 +112,7 @@ in {
       permitRootLogin = "no";
       passwordAuthentication = false;
     };
+    dbus.packages = [ pkgs.blueman ];
     upower.enable = true;
     printing.enable = true;
     xserver = {

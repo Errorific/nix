@@ -25,8 +25,6 @@ in {
 
       sidequest
 
-      blueman
-
       neovim
       vim
       vscode
