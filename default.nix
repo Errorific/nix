@@ -127,7 +127,6 @@ in {
       };
     };
     fwupd.enable = true;
-    dbus.packages = [ pkgs.blueman ];
   };
 
   powerManagement.enable = true;
