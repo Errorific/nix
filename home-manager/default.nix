@@ -104,8 +104,6 @@ in {
     network-manager-applet.enable = true;
     xembed-sni-proxy.enable = true;
     blueman-applet.enable = true;
-    # pulse audio sys tray
-    pasystray.enable = true;
   };
 
   xsession = {
