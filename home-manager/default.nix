@@ -20,7 +20,6 @@ in {
       dmenu
       networkmanagerapplet
       powertop
-      blueman
       
       slack
 
