@@ -89,6 +89,7 @@ in {
   };
 
   environment.systemPackages = with pkgs; [
+    blueman
   ];
 
   programs = {
@@ -125,9 +126,8 @@ in {
         naturalScrolling = true;
       };
     };
-    fwupd = {
-      enable = true;
-    };
+    fwupd.enable = true;
+    dbus.packages = [ pkgs.blueman ];
   };
 
   powerManagement.enable = true;

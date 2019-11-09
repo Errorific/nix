@@ -105,7 +105,6 @@ in {
     network-manager-applet.enable = true;
     xembed-sni-proxy.enable = true;
     blueman-applet.enable = true;
-    dbus.packages = [ pkgs.blueman ];
   };
 
   xsession = {
