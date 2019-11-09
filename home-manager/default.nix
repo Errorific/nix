@@ -24,6 +24,8 @@ in {
       
       slack
 
+      sidequest
+
       neovim
       vim
       vscode
