@@ -44,7 +44,22 @@ main = xmonad . docks . ewmh . pagerHints $ def
 -- Find keys using `xev -event keyboard` and look for the `keysym`.
 -- If `xev` doesn't give you the event, try `xmodmap -pk | grep <foo>`
 myKeys :: XConfig Layout -> M.Map (XT.ButtonMask, XT.KeySym) (X ())
-myKeys conf@XConfig {modMask = modm} = (M.fromList []) <> keys def conf
+myKeys conf@XConfig {modMask = modm} =
+  let xK_X86MonBrightnessDown = 0x1008ff03
+      xK_X86MonBrightnessUp   = 0x1008ff02
+      xK_X86AudioLowerVolume  = 0x1008ff11
+      xK_X86AudioRaiseVolume  = 0x1008ff13
+      xK_X86AudioMute         = 0x1008ff12
+      kees = M.fromList 
+        [ ((0, xK_X86MonBrightnessDown), spawn "brightnessctl s 5%-")
+        , ((0, xK_X86MonBrightnessUp), spawn "brightnessctl s +5%")
+        , ((0, xK_X86AudioLowerVolume), spawn "amixer sset Master 5%-")
+        , ((0, xK_X86AudioRaiseVolume), spawn "amixer sset Master 5%+")
+        , ((0, xK_X86AudioMute), spawn "amixer sset Master toggle")
+        , ((modMask, xK_Down), scratchpadSpawnAction conf)
+        , ((modMask, xK_apostrophe), scratchpadSpawnAction conf)
+        ]
+  in kees <> keys def conf
 
 myWorkspaces :: [String]
 myWorkspaces =
