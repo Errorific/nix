@@ -115,6 +115,7 @@ in {
     dbus.packages = [ pkgs.blueman ];
     upower.enable = true;
     printing.enable = true;
+    blueman.enable = true;
     xserver = {
       dpi = 120;
       enable = true;
