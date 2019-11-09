@@ -44,7 +44,7 @@ main = xmonad . docks . ewmh . pagerHints $ def
 -- Find keys using `xev -event keyboard` and look for the `keysym`.
 -- If `xev` doesn't give you the event, try `xmodmap -pk | grep <foo>`
 myKeys :: XConfig Layout -> M.Map (XT.ButtonMask, XT.KeySym) (X ())
-myKeys conf@XConfig {modMask = modm} = M.fromList $ []
+myKeys conf@XConfig {modMask = modm} = (M.fromList []) <> keys def conf
 
 myWorkspaces :: [String]
 myWorkspaces =
