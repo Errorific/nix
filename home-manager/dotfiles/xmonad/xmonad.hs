@@ -17,7 +17,7 @@ import           XMonad.ManageHook                (appName, className,
                                                    composeAll, doShift, (-->),
                                                    (<+>), (=?))
 import qualified XMonad.StackSet                  as W
-import           XMonad.Util.Scratchpad           (scratchpadSpawnAction)
+import           XMonad.Util.Scratchpad           (scratchpadSpawnAction, scratchpadManageHook)
 
 import           System.Taffybar.Support.PagerHints (pagerHints)
 
