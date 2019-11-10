@@ -18,6 +18,14 @@ in {
         canTouchEfiVariables = true;
       };
     };
+    # acpi_call makes tlp work for newer thinkpads
+    kernelModules = [ "acpi_call" ];
+    extraModulePackages = with config.boot.kernelPackages; [ acpi_call ];
+
+    kernel.sysctl = {
+      "vm.swappiness" = 1;
+    };
+    initrd.kernelModules = [ "i915" ]
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -61,6 +69,16 @@ in {
       enable = true;
     };
     brightnessctl.enable = true;
+    opengl = {
+      enable = true;
+      driSupport32Bit = true;
+      extraPackages = with pkgs; [
+        vaapiIntel
+        vaapiVdpau
+        libvdpau-va-gl
+      ];
+    };
+    cpu.intel.updateMicrocode = config.hardware.enableRedistributableFirmware;
   };
 
   sound.enable = true;
@@ -128,9 +146,15 @@ in {
       };
     };
     fwupd.enable = true;
+    tlp.enable = true;
+    fstrim.enable = true;
   };
 
-  powerManagement.enable = true;
+  powerManagement = {
+    enable = true;
+    # unset the governor so tlp can take over
+    cpuFreqGovernor = null;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   home-manager.users.chris = import ./home-manager "${machineName}";

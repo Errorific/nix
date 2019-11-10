@@ -34,7 +34,7 @@ main = xmonad . docks . ewmh . pagerHints $ def
     -- let XMonad manage docks (taffybar)
   , manageHook = myManageHook 
                  <+> manageDocks 
-                 <+> scratchpadManageHook (W.RationalRect 0 0 1 0.3)
+                 <+> scratchpadManageHook (W.RationalRect 0 0 1 0.5)
                  <+> manageHook def
   , terminal = "urxvt"
   , workspaces = myWorkspaces
