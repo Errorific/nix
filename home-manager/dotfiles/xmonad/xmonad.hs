@@ -55,9 +55,9 @@ myKeys conf@XConfig {modMask = modm} =
         , ((0, xK_X86MonBrightnessUp), spawn "brightnessctl s +5%")
         , ((0, xK_X86AudioLowerVolume), spawn "amixer sset Master 5%-")
         , ((0, xK_X86AudioRaiseVolume), spawn "amixer sset Master 5%+")
-        , ((0, xK_X86AudioMute), spawn "amixer sset Master toggle")
-        , ((modMask, XT.xK_Down), scratchpadSpawnAction conf)
-        , ((modMask, XT.xK_apostrophe), scratchpadSpawnAction conf)
+        , ((0, K_X86AudioMute), spawn "amixer sset Master toggle")
+        , ((modm, XT.xK_Down), scratchpadSpawnAction conf)
+        , ((modm, XT.xK_apostrophe), scratchpadSpawnAction conf)
         ]
   in kees <> keys def conf
 
