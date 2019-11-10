@@ -25,7 +25,7 @@ in {
     kernel.sysctl = {
       "vm.swappiness" = 1;
     };
-    initrd.kernelModules = [ "i915" ]
+    initrd.kernelModules = [ "i915" ];
   };
 
   nixpkgs.config.allowUnfree = true;
