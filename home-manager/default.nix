@@ -25,6 +25,9 @@ in {
 
       sidequest
 
+      s-tui
+      stress
+
       neovim
       vim
       vscode
@@ -63,6 +66,7 @@ in {
       #fonts = ["xft:Sauce Code Pro Nerd Font:size=11"];
       #fonts = ["xft:TerminessTTF Nerd Font:size=11"];
       fonts = ["xft:FuraCode Nerd Font:size=11"];
+      transparent = true;
     };
     #vscode = {
     #  enable = true;
