@@ -56,8 +56,8 @@ myKeys conf@XConfig {modMask = modm} =
         , ((0, xK_X86AudioLowerVolume), spawn "amixer sset Master 5%-")
         , ((0, xK_X86AudioRaiseVolume), spawn "amixer sset Master 5%+")
         , ((0, xK_X86AudioMute), spawn "amixer sset Master toggle")
-        , ((modMask, xK_Down), scratchpadSpawnAction conf)
-        , ((modMask, xK_apostrophe), scratchpadSpawnAction conf)
+        , ((modMask, XT.xK_Down), scratchpadSpawnAction conf)
+        , ((modMask, XT.xK_apostrophe), scratchpadSpawnAction conf)
         ]
   in kees <> keys def conf
 
