@@ -66,10 +66,12 @@ in {
       #fonts = ["xft:Sauce Code Pro Nerd Font:size=11"];
       #fonts = ["xft:TerminessTTF Nerd Font:size=11"];
       fonts = ["xft:FuraCode Nerd Font:size=11"];
-      #transparent = true;
+      transparent = true;
+      shading = 20;
       extraConfig = {
+        "antialias" = true;
         "depth" = 32;
-        "background" = "[75]#000000";
+        "background" = "rgba:0000/0000/0000/cccc";
       };
     };
     zsh = {
