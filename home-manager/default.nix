@@ -24,7 +24,7 @@ in {
       slack
 
       sidequest
-
+      google-drive-ocamlfuse
       s-tui
       stress
 
