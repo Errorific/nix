@@ -11,6 +11,7 @@ let
 in {
   nixpkgs.overlays = [
     (import ./home-overlays/taffybar)
+    (import ./home-overlays/tmux-themepack)
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -60,6 +61,9 @@ in {
       terminal = "screen-256color";
       aggressiveResize = true;
       shortcut = "z";
+      extraConfig = ''
+        source-file "${pkgs.tmux-themepack}/powerline/block/gray.tmuxtheme"
+      '';
     };
     urxvt = {
       enable = true;
