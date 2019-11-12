@@ -135,7 +135,7 @@ in {
   };
 
   systemd.user.services.googleDriveOcamlfuse =
-    startupItem {cmd = "${pkgs.google-drive-ocamlfuse}/bin/google-drive-ocamlfuse ~/GoogleDrive"; description = "google drive ocamlfuse daemon";};
+    startupItem {cmd = "su chris -l -c '${pkgs.google-drive-ocamlfuse}/bin/google-drive-ocamlfuse ~/GoogleDrive'"; description = "google drive ocamlfuse daemon";};
 
   xsession = {
     enable = true;
