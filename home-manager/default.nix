@@ -138,7 +138,7 @@ in {
       enable = true;
       settings = {
         global = {
-          font = "Source Code Pro";
+          font = "Sauce Code Pro Nerd Font";
           markup = "full";
           format = "<b>%s</b>\\n%b";
           icon_position = "left";
