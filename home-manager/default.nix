@@ -7,6 +7,23 @@ let
     $DRY_RUN_CMD systemctl --user restart taffybar.service && true
     echo "Taffybar restart done"
   '';
+
+  startupItem = {cmd, description}:
+    {
+      Unit = {
+        Description = "${description}";
+      };
+
+      Service = {
+        ExecStart = "${cmd}";
+        Restart = "on-failure";
+      };
+
+      Install = {
+        WantedBy = [ "default.target" ];
+      };
+    };
+
   all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};
 in {
   nixpkgs.overlays = [
@@ -116,6 +133,9 @@ in {
     xembed-sni-proxy.enable = true;
     blueman-applet.enable = true;
   };
+
+  systemd.user.services.googleDriveOcamlfuse =
+    startupItem {cmd = "${pkgs.google-drive-ocamlfuse}/bin/google-drive-ocamlfuse ~/GoogleDrive"; description = "google drive ocamlfuse daemon";};
 
   xsession = {
     enable = true;
