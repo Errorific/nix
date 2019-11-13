@@ -151,7 +151,7 @@ in {
           sort = true;
           alignment = "center";
           geometry = "500x60-15+49";
-          browser = "/usr/bin/firefox -new-tab";
+          browser = "${config.programs.chromium.package}/bin/chromium";
           transparency = 10;
           word_wrap = true;
           show_indicators = false;
