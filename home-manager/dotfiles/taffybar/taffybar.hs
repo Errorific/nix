@@ -36,7 +36,7 @@ main =
       tray = sniTrayNew
       batt = textBatteryNew "Batt: $percentage$% $status$ $time$"
       cfg = defaultSimpleTaffyConfig
-        { barHeight = 40
+        { barHeight = 30
         , barPosition = Top
         , widgetSpacing = 10
         , startWidgets = workspaces : map (>>= buildContentsBox) [ layout, windows ]
