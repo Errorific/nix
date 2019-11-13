@@ -46,6 +46,7 @@ in {
       s-tui
       stress
 
+      steam
       xlockmore
       neovim
       vim
