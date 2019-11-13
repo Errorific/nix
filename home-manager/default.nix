@@ -46,6 +46,7 @@ in {
       s-tui
       stress
 
+      xlockmore
       neovim
       vim
       vscode
@@ -134,6 +135,11 @@ in {
     blueman-applet.enable = true;
     flameshot.enable = true;
     unclutter.enable = true;
+    screen-locker = {
+      enable = true;
+      lockCmd = "xlock -mode blank";
+      inactiveInterval = 10;
+    };
     dunst = {
       enable = true;
       settings = {
