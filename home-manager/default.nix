@@ -150,7 +150,8 @@ in {
           icon_position = "left";
           sort = true;
           alignment = "center";
-          geometry = "500x60-15+49";
+          # geometry = "500x60-15+49";
+          geometry = "500x5-5+30";
           browser = "${config.programs.chromium.package}/bin/chromium";
           transparency = 10;
           word_wrap = true;
@@ -168,22 +169,24 @@ in {
           context = "ctrl+shift+period";
         };
         urgency_low = {
-          frame_color = "#3B7C87";
-          foreground = "#3B7C87";
-          background = "#191311";
-          timeout = 4;
+          background = "#1d1f21";
+          foreground = "#4da1af";
+          frame_color = "#4da1af";
+          timeout = 10;
         };
+
         urgency_normal = {
-          frame_color = "#5B8234";
-          foreground = "#5B8234";
-          background = "#191311";
-          timeout = 6;
+          background = "#1d1f21";
+          foreground = "#70a040";
+          frame_color = "#70a040";
+          timeout = 15;
         };
+
         urgency_critical = {
-          frame_color = "#B7472A";
-          foreground = "#B7472A";
-          background = "#191311";
-          timeout = 8;
+          background = "#1d1f21";
+          foreground = "#dd5633";
+          frame_color = "#dd5633";
+          timeout = 0;
         };
       };
     };
